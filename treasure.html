@@ -1,58 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Saikiran Pendli Treasure</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"   
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" 
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-</head>
-<body>
-    <h3>Treasure hunt Saikiran Pendli</h3>
-    <p style="padding-left:5rem;color:rgb(214, 67, 30);">Click on the chests to search for treasure</p>
-    <p id="chests" style="padding-left: 5rem;color:rgb(32, 236, 32);">Number of chests checked is zero</p>
-    <p id="score" style="padding-left: 5rem;color:rgb(214, 27, 127);">Score is unknown</p>
-    <p id="help" style="padding-left: 5rem;color:rgb(5, 70, 64);">Help report</p>
-    <div class="cointainer">
-    <div class="row" style="padding-left: 5rem;">
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;" ></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-    </div>
-    <div class="row" style="padding-left: 5rem;">
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-    </div>
-    <div class="row" style="padding-left: 5rem;">
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="help.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-    </div>
-    <div class="row" style="padding-left: 5rem;">
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-    </div>
-    <div class="row" style="padding-left: 5rem;">
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-        <div class="col-md-1"><img src="closed treasure.jpg" alt="treasure hunt" style="width:100px;height:80px;padding: 5%;"></div>
-    </div>  
-  </div>
-    </body>
-    </html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Treasure</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Indie+Flower&display=swap" rel="stylesheet">
+
+        <style>
+            h1 {
+               color:crimson;
+               font-family: Audiowide;
+               padding: 5px;
+               margin-bottom: 10px;
+            }
+            .menu {
+                background-color:chartreuse;
+                padding: 3px;
+                text-align: center;
+            }
+            .menu-item {
+                font-family: "Indie Flower";
+                font-weight: 800;
+                font-size: 18px;
+                margin: 6px;
+            }
+            .menu-item:hover {
+                background-color:mintcream;
+                color:darkorange;
+            }
+            .search {
+                color:violet;
+                font-family: "Indie Flower";
+                font-weight: 800;
+                font-size: 18px;
+                margin: 6px;
+            }
+            .check {
+                background-color:floralwhite;
+            }
+            .score {
+                background-color:bisque;
+            }
+            .help {
+                background-color:steelblue;
+            }
+            button {
+                margin: 15px;
+                width: 200px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container text-center">
+            <h1>Treasure hunt Saikiran Pendli</h1>
+            <div class="row">
+                <div class="col-12 search">
+                    Click on the chests to search for treasure
+                </div>
+            </div>
+            <div class="row menu">
+                <div id="chests" class="col-sm menu-item check">
+                    Number of chests checked is zero
+                </div>
+                <div id="score" class="col-sm menu-item score">
+                    Score is unknown
+                </div>
+                <div id="help" class="col-sm menu-item help">
+                    Help report
+                </div>
+            </div>
+            <div class="container text-center">
+                <button class="btn btn-success" type="submit" onclick="resetGame()">Reset</button>
+            </div>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <img id="kiran_0" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(0)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_1" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(1)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_2" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(2)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_3" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(3)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_4" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(4)">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <img id="kiran_5" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(5)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_6" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(6)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_7" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(7)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_8" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(8)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_9" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(9)">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <img id="kiran_10" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(10)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_11" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(11)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_12" src="help.jpg" alt="Treasure Chest" width="150" height="150" onclick="help()">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_13" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(13)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_14" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(14)">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <img id="kiran_15" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(15)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_16" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(16)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_17" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(17)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_18" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(18)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_19" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(19)">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <img id="kiran_20" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(20)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_21" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(21)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_22" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(22)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_23" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(23)">
+                    </div>
+                    <div class="col-sm">
+                        <img id="kiran_24" src="closed treasure.jpg" alt="Treasure Chest" width="150" height="150" onclick="check(24)">
+                    </div>
+                </div>
+            </div>
+        </div>
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+         <script>
+              var ids = [
+                        "kiran_0", "kiran_1", "kiran_2", "kiran_3", "kiran_4","kiran_5", "kiran_6", "kiran_7", "kiran_8", "kiran_9","kiran_10", "kiran_11", "kiran_12", "kiran_13", "kiran_14","kiran_15", "kiran_16", "kiran_17", "kiran_18", "kiran_19","kiran_20", "kiran_21", "kiran_22", "kiran_23", "kiran_24"
+                    ]        
+            var chestCount = 0
+            var score = 0
+            var lastCheck = 12
+            var treasureLocation = Math.floor(Math.random() * 24)
+
+            function check(position) {
+                image = document.getElementById(ids[position])
+                if(position == treasureLocation) {
+                    image.src = "closed treasure.jpg"
+                } else {
+                    image.src = "empty treasure.jpg"
+                }
+                chestCount += 1
+                score += 1 // to change
+                document.getElementById("chests").innerHTML = "Number of chests checked is " +         chestCount;
+                document.getElementById("score").innerHTML = "Score is " + score
+                lastCheck = position;
+            }
+
+            function help() {
+                lastCheck_row = parseInt(lastCheck / 5)
+                lastCheck_column = parseInt(lastCheck % 5)
+                treasureLocation_row = parseInt(treasureLocation / 5)
+                treasureLocation_column = parseInt(treasureLocation % 5)
+                score += 2
+                document.getElementById("score").innerHTML = "Score is " + score
+                if(lastCheck_row == treasureLocation_row) {
+                    if(lastCheck_column < treasureLocation_column) {
+                        document.getElementById("help").innerHTML = "Right"
+                    } else if(lastCheck_column > treasureLocation_column) {
+                        document.getElementById("help").innerHTML = "Left"
+                    } else {
+                        document.getElementById("help").innerHTML = "Sorry, no help available"
+                    }
+                } else if(lastCheck_column == treasureLocation_column) {
+                    if(lastCheck_row < treasureLocation_row) {
+                        document.getElementById("help").innerHTML = "Up"
+                    } else if(lastCheck_row > treasureLocation_row) {
+                        document.getElementById("help").innerHTML = "Down"
+                    } else {
+                        document.getElementById("help").innerHTML = "Sorry, no help available"
+                    }
+                } else {
+                    document.getElementById("help").innerHTML = "Sorry, no help available"
+                }
+            }
+            </script>
